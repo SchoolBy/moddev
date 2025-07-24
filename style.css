@@ -1,0 +1,278 @@
+:root {
+    --primary-red: #ff4757;
+    --dark-bg: #1a1a1a;
+    --medium-bg: #2c2c2c;
+    --light-text: #f5f5f5;
+    --grey-text: #a3a3a3;
+    --discord-blurple: #5865F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    overflow-x: hidden;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--medium-bg);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--light-text);
+}
+
+.logo span {
+    color: var(--primary-red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--grey-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-discord {
+    background-color: var(--medium-bg);
+    color: var(--light-text);
+    border: 1px solid #444;
+}
+
+.btn-discord:hover {
+    background-color: var(--discord-blurple);
+    color: white;
+    transform: translateY(-2px);
+    border-color: var(--discord-blurple);
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    background: linear-gradient(rgba(26, 26, 26, 0.5), var(--dark-bg)), 
+                radial-gradient(circle at 50% 30%, var(--medium-bg) 0%, var(--dark-bg) 80%);
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--grey-text);
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.btn-primary {
+    background: var(--primary-red);
+    color: var(--light-text);
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    box-shadow: 0 0 25px rgba(255, 71, 87, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(255, 71, 87, 0.7);
+}
+
+/* --- Featured Mods Section --- */
+.featured-mods {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.mod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.mod-card {
+    background: var(--medium-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #3a3a3a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.mod-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(26, 26, 26, 0.8);
+    color: var(--primary-red);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Makes card content grow to fill space */
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+.card-content p {
+    color: var(--grey-text);
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the button to the bottom */
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary {
+    background: #3a3a3a;
+    color: var(--light-text);
+    align-self: flex-start; /* Aligns button to the left */
+}
+
+.btn-secondary:hover {
+    background: var(--primary-red);
+    color: var(--light-text);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #111;
+    color: var(--grey-text);
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-pop-in {
+    animation: pop-in 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Staggered animation for hero elements */
+.hero-content h1 { animation-delay: 0.2s; }
+.hero-content p { animation-delay: 0.4s; }
+.hero-content .btn { animation-delay: 0.6s; }
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for cards */
+.mod-card:nth-child(1) { transition-delay: 0.1s; }
+.mod-card:nth-child(2) { transition-delay: 0.2s; }
+.mod-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on mobile; can be replaced with a hamburger menu */
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}

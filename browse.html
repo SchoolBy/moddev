@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Mods - ModForge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- The header is identical to the homepage for consistency -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MOD<span>FORGE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="#">Submit a Mod</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+            <a href="#" class="btn btn-discord">
+                <i class="fa-brands fa-discord"></i> Join Discord
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content for the Browse Page -->
+    <main class="browse-page-main">
+        <div class="browse-header">
+            <h1>The Mod Library</h1>
+            <p>Find the next great addition for your favorite games.</p>
+        </div>
+
+        <!-- Filter and Sort Bar -->
+        <div class="filter-bar">
+            <input type="text" class="form-input search-bar" placeholder="Search for a mod...">
+            <select class="form-input">
+                <option value="">Filter by Game</option>
+                <option value="cyberpunk">Cyberpunk 2077</option>
+                <option value="witcher">The Witcher 3</option>
+                <option value="stardew">Stardew Valley</option>
+                <option value="skyrim">Skyrim</option>
+            </select>
+            <select class="form-input">
+                <option value="">Sort by</option>
+                <option value="popular">Popularity</option>
+                <option value="latest">Latest</option>
+                <option value="name">Name (A-Z)</option>
+            </select>
+        </div>
+
+        <!-- Full Grid of Mods -->
+        <section class="mod-grid-full">
+            <!-- Row 1 -->
+            <div class="mod-card animate-on-scroll">
+                <div class="card-image"><img src="https://placehold.co/600x400/ff4757/1a1a1a?text=Awesome+Mod" alt="Mod Visual"><span class="game-tag">Cyberpunk 2077</span></div>
+                <div class="card-content"><h3>Project Realism Overhaul</h3><p>A complete visual and gameplay overhaul.</p><a href="#" class="btn btn-secondary">Download</a></div>
+            </div>
+            <div class="mod-card animate-on-scroll">
+                <div class="card-image"><img src="https://placehold.co/600x400/ff4757/1a1a1a?text=Another+Mod" alt="Mod Visual"><span class="game-tag">The Witcher 3</span></div>
+                <div class="card-content"><h3>Legendary Armory</h3><p>Adds over 50 new lore-friendly weapons and armor sets.</p><a href="#" class="btn btn-secondary">Download</a></div>
+            </div>
+            <div class="mod-card animate-on-scroll">
+                <div class="card-image"><img src="https://placehold.co/600x400/ff4757/1a1a1a?text=Cool+Mod" alt="Mod Visual"><span class="game-tag">Stardew Valley</span></div>
+                <div class="card-content"><h3>Expanded Universe</h3><p>A massive expansion that adds new characters and locations.</p><a href="#" class="btn btn-secondary">Download</a></div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="mod-card animate-on-scroll">
+                <div class="card-image"><img src="https://placehold.co/600x400/ff4757/1a1a1a?text=Skyrim+Mod" alt="Mod Visual"><span class="game-tag">Skyrim</span></div>
+                <div class="card-content"><h3>Weather & Seasons</h3><p>Introduces dynamic weather patterns and seasonal foliage.</p><a href="#" class="btn btn-secondary">Download</a></div>
+            </div>
+            <div class="mod-card animate-on-scroll">
+                <div class="card-image"><img src="https://placehold.co/600x400/ff4757/1a1a1a?text=Cyberpunk+Mod" alt="Mod Visual"><span class="game-tag">Cyberpunk 2077</span></div>
+                <div class="card-content"><h3>Vehicle Combat</h3><p>Enables full vehicle combat with mounted weapons.</p><a href="#" class="btn btn-secondary">Download</a></div>
+            </div>
+            <div class="mod-card animate-on-scroll">
+                <div class="card-image"><img src="https://placehold.co/600x400/ff4757/1a1a1a?text=Witcher+Mod" alt="Mod Visual"><span class="game-tag">The Witcher 3</span></div>
+                <div class="card-content"><h3>Magic Unleashed</h3><p>A complete overhaul of the sign and magic system.</p><a href="#" class="btn btn-secondary">Download</a></div>
+            </div>
+
+            <!-- Add as many more mod-card divs as you need! -->
+
+        </section>
+    </main>
+
+    <!-- The footer is also identical -->
+    <footer>
+        <p>© 2024 ModForge. All mods are property of their respective creators.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
